@@ -41,7 +41,7 @@
               type="text" 
               v-model="form.kelas" 
               class="form-control" 
-              placeholder="Contoh: XII RPL 1" 
+              placeholder="Contoh: XI" 
               required 
               :disabled="isLoading"
             />

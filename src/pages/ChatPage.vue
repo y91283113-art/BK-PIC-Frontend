@@ -12,31 +12,43 @@
         <div class="info-panel">
           <h2 class="panel-title">📋 Detail Sesi Konseling</h2>
           <table class="info-table">
-            <tr>
-              <td class="label">Siswa</td>
-              <td class="value"><strong>{{ booking.siswa?.nama || '-' }}</strong></td>
-            </tr>
-            <tr>
-              <td class="label">Guru BK</td>
-              <td class="value"><strong>{{ booking.guru?.nama || '-' }}</strong></td>
-            </tr>
-            <tr>
-              <td class="label">Tanggal</td>
-              <td class="value">{{ formatDate(booking.tanggal) }} ({{ booking.jam }})</td>
-            </tr>
-            <tr>
-              <td class="label">Keluhan</td>
-              <td class="value">{{ booking.keluhan }}</td>
-            </tr>
-            <tr>
-              <td class="label">Status</td>
-              <td class="value">
-                <span class="badge" :class="`badge-${booking.status}`">
-                  {{ capitalize(booking.status) }}
-                </span>
-              </td>
-            </tr>
-          </table>
+  <tbody>
+    <tr>
+      <td class="label">Siswa</td>
+      <td class="value">
+        <strong>{{ booking.siswa?.nama || '-' }}</strong>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Guru BK</td>
+      <td class="value">
+        <strong>{{ booking.guru?.nama || '-' }}</strong>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Tanggal</td>
+      <td class="value">
+        {{ formatDate(booking.tanggal) }} ({{ booking.jam }})
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Keluhan</td>
+      <td class="value">{{ booking.keluhan }}</td>
+    </tr>
+
+    <tr>
+      <td class="label">Status</td>
+      <td class="value">
+        <span class="badge" :class="`badge-${booking.status}`">
+          {{ capitalize(booking.status) }}
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
         </div>
 
         <!-- SISWA VIEW -->
